@@ -4,12 +4,13 @@
   "description": "Uma plataforma de perguntas e respostas ao estilo Yahoo!",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "set NODE_ENV=production&&node index.js",
+    "dev": "set NODE_ENV=development&&nodemon index.js"
   },
   "author": "Daniel Moura Barros",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
     "express": "^4.18.2",
     "mysql2": "^3.0.1",

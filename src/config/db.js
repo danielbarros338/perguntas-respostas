@@ -1,12 +1,13 @@
 const Sequelize = require('sequelize');
 
 const connection = new Sequelize(
-  'questionguide',
-  'root',
-  'W_06-dMb.94',
+  process.env.DB_DATABASE,
+  process.env.DB_USER,
+  process.env.DB_PASSWORD,
   {
-    host: 'localhost',
-    dialect: 'mysql'
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
+    dialect: process.env.DB_DIALECT
   }
 );
 

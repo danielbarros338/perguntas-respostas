@@ -1,5 +1,13 @@
 const express = require("express");
+const dotenv = require("dotenv")
 const app = express();
+
+dotenv.config({
+  path:
+    process.env.NODE_ENV === "development"
+      ? ".env.development"
+      : ".env.production"
+})
 
 app.set("view engine", "ejs"); // Define uma template engine
 // É necessário criar uma pasta na rota root, chamada "views", para
