@@ -6,8 +6,12 @@ WORKDIR /usr/src/questionguide
 COPY .env.development /usr/src/questionguide/
 COPY .env.production /usr/src/questionguide/
 
+ARG BUILD_ENV
+ENV NODE_ENV=$BUILD_ENV
+
 RUN apk update && apk upgrade
 RUN apk add git
+RUN apk add yarn
 
 COPY . /usr/src/questionguide/
 RUN yarn install
