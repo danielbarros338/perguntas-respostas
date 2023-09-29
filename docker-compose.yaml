@@ -1,8 +1,8 @@
 version: "3.7"
 services:
-  avin-backend:
+  question_guide:
     build: "./"
-    container_name: "avin-backend"
+    container_name: "question_guide"
     restart: always
     ports:
       - "3030:3030"
