@@ -1,0 +1,8 @@
+version: "3.7"
+services:
+  avin-backend:
+    build: "./"
+    container_name: "avin-backend"
+    restart: always
+    ports:
+      - "3030:3030"
